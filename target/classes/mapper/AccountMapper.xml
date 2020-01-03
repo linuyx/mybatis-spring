@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itcast.dao.AccountDao">
+
+    <!--定义sql片段
+        id：sql片段的唯一标识
+
+        经验：是基于单表来定义sql片段，这样这个sql片段可重用性才高
+        在sql片段中不要加where
+    -->
+    <sql id="query_account_where">
+
+        <if test="account != null">
+            <if test="account.money != null and account.money != ''" >
+                account.money=#{account.money}
+            </if>
+
+            <if test="account.name != null and account.name != ''">
+                and account.name like '%${account.name}%'
+            </if>
+        </if>
+    </sql>
+
+    <select id="findAccountById" parameterType="Integer"  resultType="com.itcast.pojo.Account">
+        SELECT * FROM account WHERE  id=#{value}
+    </select>
+
+    <select id="findAll" resultType="com.itcast.pojo.Account">
+        SELECT * FROM account
+    </select>
+
+    <select id="findAccountLikeName" parameterType="String" resultType="com.itcast.pojo.Account">
+        SELECT * FROM account where name like '%${value}%'
+    </select>
+
+    <select id="findAccountNameMoney" resultType="com.itcast.pojo.Account">
+        select * from  account where name=#{name} and money=#{money}
+    </select>
+
+    <insert id="saveAccount" parameterType="com.itcast.pojo.Account" >
+
+        <selectKey keyProperty="id" order="AFTER" resultType="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+
+        insert  into account (name,money) values(#{name},#{money})
+    </insert>
+
+    <delete id="deleteAccountById" parameterType="com.itcast.pojo.Account">
+        delete  from account where id=#{id}
+    </delete>
+
+    <update id="updateAccountById" parameterType="com.itcast.pojo.Account">
+        update account set name=#{name},money=#{money} where id=#{id}
+    </update>
+
+    <select id="findAccountVo" parameterType="com.itcast.pojo.AccountVo" resultType="com.itcast.pojo.Account">
+
+      <!--
+      第一种：直接写
+
+      select * from account where account.money=#{account.money} and account.name like '%${account.name}%'
+      -->
+
+     <!--
+     第二种：用动态sql
+
+      select * from account
+
+     <where>
+            <if test="account != null">
+                <if test="account.money != null and account.money != ''" >
+                        account.money=#{account.money}
+                </if>
+
+                <if test="account.name != null and account.name != ''">
+                    and account.name like '%${account.name}%'
+                </if>
+            </if>
+        </where> -->
+
+        <!--第三种：引用sql片段,如果定义的refid不在本mapper文件中，需要前面加namespace-->
+        select * from account
+
+        <where>
+            <include refid="query_account_where"></include>
+        </where>
+
+    </select>
+
+</mapper>

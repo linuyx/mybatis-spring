@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--开启注解的扫描-->
+    <context:component-scan base-package="com.itcast"></context:component-scan>
+
+    <!--加载配置文件-->
+    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+
+    <!--配置数据源-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"></property>
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="username" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </bean>
+
+
+    <!--===============================================================================-->
+    <!--spring整合mybatis-->
+    <!--配置sqlSessionFactory工厂-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--指定mybatis全局配置文件的位置-->
+        <property name="configLocation" value="classpath:mybatis-config.xml"></property>
+        <!--指定数据源和mybatis建立关系-->
+        <property name="dataSource" ref="dataSource"></property>
+        <!--指定mybatis的mapper.xml的文件位置-->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
+    </bean>
+
+    <!--配置AccountDao所在的包==或者是以下两种说法-->
+    <!--配置扫描器，将mybatis的接口实现添加到ioc容器中-->
+    <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--扫描所有dao接口的实现，加入到ioc容器中-->
+        <property name="basePackage" value="com.itcast.dao"></property>
+    </bean>
+    <!--=================================================================================-->
+
+
+    <!--=================================================================================-->
+    <!--配置spring声明式事务的管理-->
+    <!--配置事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!--配置事务通知-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="find*" read-only="true" propagation="SUPPORTS"/>
+            <tx:method name="*" read-only="false" propagation="REQUIRED"></tx:method>
+        </tx:attributes>
+    </tx:advice>
+
+    <!--配置aop增强-->
+    <aop:config >
+        <!--配置切入点表达式-->
+        <aop:pointcut id="pt1" expression="execution(* com.itcast.service.impl.*.*(..))"/>
+        <!--建立事务通知和切入点表达式的关系-->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pt1"></aop:advisor>
+    </aop:config>
+    <!--=================================================================================-->
+
+</beans>
