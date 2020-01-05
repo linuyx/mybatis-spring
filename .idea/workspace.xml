@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32072370-2c7a-4038-9dc2-577a25af3890" name="Default Changelist" comment="" />
+    <list default="true" id="32072370-2c7a-4038-9dc2-577a25af3890" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +21,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="F:\IDEA-Project\maven_spring_mybatis\.idea" />
+      </set>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -37,12 +48,14 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectId" id="1VhMXLj3DVPdHDsYDDakbYSR02Z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -55,9 +68,25 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
-  <component name="RunManager" selected="JUnit.TestSpringMybatis.testFindAccountVo">
+  <component name="RunManager" selected="JUnit.TestSpringMybatis.testFindAccountLikeName">
+    <configuration name="TestSpringMybatis.findAccountNameMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maven_spring_mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itcast.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itcast" />
+      <option name="MAIN_CLASS_NAME" value="com.itcast.TestSpringMybatis" />
+      <option name="METHOD_NAME" value="findAccountNameMoney" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestSpringMybatis.testDeleteAccountById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maven_spring_mybatis" />
       <extension name="coverage">
@@ -90,7 +119,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSpringMybatis.testFindAccountVo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSpringMybatis.testFindAccountLikeName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maven_spring_mybatis" />
       <extension name="coverage">
         <pattern>
@@ -100,13 +129,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.itcast" />
       <option name="MAIN_CLASS_NAME" value="com.itcast.TestSpringMybatis" />
-      <option name="METHOD_NAME" value="testFindAccountVo" />
+      <option name="METHOD_NAME" value="testFindAccountLikeName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSpringMybatis.testSaveAccount (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSpringMybatis.testFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maven_spring_mybatis" />
       <extension name="coverage">
         <pattern>
@@ -116,23 +145,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.itcast" />
       <option name="MAIN_CLASS_NAME" value="com.itcast.TestSpringMybatis" />
-      <option name="METHOD_NAME" value="testSaveAccount" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestSpringMybatis.testUpdateAccountById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maven_spring_mybatis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itcast.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.itcast" />
-      <option name="MAIN_CLASS_NAME" value="com.itcast.TestSpringMybatis" />
-      <option name="METHOD_NAME" value="testUpdateAccountById" />
+      <option name="METHOD_NAME" value="testFindAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestSpringMybatis.testFindAccountVo" />
+        <item itemvalue="JUnit.TestSpringMybatis.testFindAccountLikeName" />
+        <item itemvalue="JUnit.TestSpringMybatis.findAccountNameMoney" />
         <item itemvalue="JUnit.TestSpringMybatis.testFindAccountById" />
-        <item itemvalue="JUnit.TestSpringMybatis.testUpdateAccountById" />
+        <item itemvalue="JUnit.TestSpringMybatis.testFindAll" />
         <item itemvalue="JUnit.TestSpringMybatis.testDeleteAccountById" />
-        <item itemvalue="JUnit.TestSpringMybatis.testSaveAccount (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -179,11 +192,68 @@
       <workItem from="1577940884092" duration="17192000" />
       <workItem from="1578044217763" duration="71000" />
       <workItem from="1578055059312" duration="44000" />
+      <workItem from="1578056622203" duration="1552000" />
+      <workItem from="1578108066092" duration="276000" />
+      <workItem from="1578109184883" duration="751000" />
+      <workItem from="1578109953184" duration="372000" />
+      <workItem from="1578110571921" duration="849000" />
+      <workItem from="1578114934253" duration="2710000" />
+      <workItem from="1578124680168" duration="1316000" />
+      <workItem from="1578196221311" duration="635000" />
+      <workItem from="1578210763990" duration="1057000" />
     </task>
+    <task id="LOCAL-00001" summary="mybatis和spring的第一次整合">
+      <created>1578056688558</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578056688558</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="mybatis和spring的第一次整合" />
+    <option name="LAST_COMMIT_MESSAGE" value="mybatis和spring的第一次整合" />
   </component>
   <component name="WindowStateProjectService">
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1577945595867">
@@ -198,30 +268,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="350" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog/0.0.1366.728@0.0.1366.728" timestamp="1577884540681" />
-    <state x="463" y="108" key="FileChooserDialogImpl" timestamp="1578056632188">
+    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1578056685513">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="108" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578056632188" />
-    <state width="1323" height="171" key="GridCell.Tab.0.bottom" timestamp="1577972444612">
+    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1578056685513" />
+    <state x="463" y="108" key="FileChooserDialogImpl" timestamp="1578057160119">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="171" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577972444612" />
-    <state width="1323" height="171" key="GridCell.Tab.0.center" timestamp="1577972444612">
+    <state x="463" y="108" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578057160119" />
+    <state width="1323" height="171" key="GridCell.Tab.0.bottom" timestamp="1578213221368">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="171" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1577972444612" />
-    <state width="1323" height="171" key="GridCell.Tab.0.left" timestamp="1577972444612">
+    <state width="1323" height="171" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578213221368" />
+    <state width="1323" height="171" key="GridCell.Tab.0.center" timestamp="1578213221368">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="171" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1577972444612" />
-    <state width="1323" height="171" key="GridCell.Tab.0.right" timestamp="1577972444612">
+    <state width="1323" height="171" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578213221368" />
+    <state width="1323" height="171" key="GridCell.Tab.0.left" timestamp="1578213221368">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="171" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1577972444612" />
-    <state x="186" y="9" key="SettingsEditor" timestamp="1578055093188">
+    <state width="1323" height="171" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578213221368" />
+    <state width="1323" height="171" key="GridCell.Tab.0.right" timestamp="1578213221368">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1578055093188" />
+    <state width="1323" height="171" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578213221368" />
+    <state x="323" y="68" key="NewModule_or_Project.wizard" timestamp="1578057162888">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="323" y="68" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1578057162888" />
+    <state x="186" y="9" key="SettingsEditor" timestamp="1578115727255">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1578115727255" />
+    <state x="274" y="135" key="Vcs.Push.Dialog.v2" timestamp="1578057543304">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="274" y="135" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1578057543304" />
+    <state x="480" y="270" key="git4idea.ui.GitResetDialog" timestamp="1578058177305">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="480" y="270" key="git4idea.ui.GitResetDialog/0.0.1366.728@0.0.1366.728" timestamp="1578058177305" />
     <state x="57" y="68" key="new project wizard" timestamp="1578044282452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
